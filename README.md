@@ -72,18 +72,18 @@ export ZSHSELECT_START_IN_SEARCH_MODE="1"   # Starts Zsh-Select with searching a
 ```
 
 ## Use with plugin managers
-### [Zplugin](https://github.com/psprint/zplugin)
+### [Zinit](https://github.com/zdharma-continuum/zinit)
 
-Add `zplugin load psprint/zsh-select` to `.zshrc`.
+Add `zinit load zdharma-continuum/zsh-select` to `.zshrc`.
 The plugin will be loaded next time you start `Zsh`.
-To update issue `zplugin update psprint/zsh-select` from command line.
+To update issue `zinit update zdharma-continuum/zsh-select` from command line.
 
 ### Zgen
 
-Add `zgen load psprint/zsh-select` to `.zshrc` and issue a `zgen reset` (this
+Add `zgen load zdharma-continuum/zsh-select` to `.zshrc` and issue a `zgen reset` (this
 assumes that there is a proper `zgen save` construct in `.zshrc`).
 
 ### Antigen
-Add `antigen bundle psprint/zsh-select` to `.zshrc`. There also should be
+Add `antigen bundle zdharma-continuum/zsh-select` to `.zshrc`. There also should be
 `antigen apply`.
 
