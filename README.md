@@ -2,21 +2,19 @@
 
 ## Introduction
 
-A shell command that will display selection list. It is similar to `selecta`,
-but uses curses library to do display, and when compared to `fzf`, the main
-difference is approximate matching instead of fuzzy matching. It is written in
-Zshell and has it's capabilities:
+A shell command that will display selection list. It is similar to `selecta`, but uses curses library to do display, and
+when compared to `fzf`, the main difference is approximate matching instead of fuzzy matching. It is written in Zshell
+and has it's capabilities:
 
 - patterns, allowing multi-term searching
 - curses module
 - approximate matching (`Ctrl-F`)
 
-The file `zsh-select` can be copied to any `bin` directory. `Zsh` will
-serve as say `Ruby`, and `zsh-select` will be a regular program available
-in system.
+The file `zsh-select` can be copied to any `bin` directory. `Zsh` will serve as say `Ruby`, and `zsh-select` will be a
+regular program available in system.
 
-Pressing `o` will make elements uniqe. To search again after pressing enter,
-press `/`. Approximate matching mode is activated by `Ctrl-F`.
+Pressing `o` will make elements uniqe. To search again after pressing enter, press `/`. Approximate matching mode is
+activated by `Ctrl-F`.
 
 Video: [asciinema](https://asciinema.org/a/48490). You can resize the video by pressing `Ctrl-+` or `Cmd-+`.
 
@@ -24,18 +22,15 @@ Video: [asciinema](https://asciinema.org/a/48490). You can resize the video by p
 
 ## Installation
 
-Simply copy file `zsh-select` to any `bin` directory such as `/usr/local/bin`.
-The package is also available as plugin. `zsh-select` will be available in
-interactive `Zsh` sessions only when using this method. Nevertheless, integration
-with `Vim` and other uses will simply work when `Zsh` is your main shell. Also,
-plugin managers often allow easy updates.
+Simply copy file `zsh-select` to any `bin` directory such as `/usr/local/bin`. The package is also available as plugin.
+`zsh-select` will be available in interactive `Zsh` sessions only when using this method. Nevertheless, integration with
+`Vim` and other uses will simply work when `Zsh` is your main shell. Also, plugin managers often allow easy updates.
 
 ## Integration with Vim
 
-Adding following snippet to `vimrc` will provide `\f` keyboard shortcut that will
-run `zsh-select` as file-selector. Multi-term searching and approximate matching
-(`Ctrl-F`) will be available. The snippet is based on code from `selecta` github
-page (MIT license):
+Adding following snippet to `vimrc` will provide `\f` keyboard shortcut that will run `zsh-select` as file-selector.
+Multi-term searching and approximate matching (`Ctrl-F`) will be available. The snippet is based on code from `selecta`
+github page (MIT license):
 
 ```vim
 " Run a given vim command on the results of fuzzy selecting from a given shell
@@ -60,8 +55,8 @@ nnoremap <leader>f :call ZshSelectCommand("find * -type f 2>/dev/null", "", ":e"
 
 ## Configuring
 
-There are a few environment variables that can be set to alter `Zsh-Select`
-behavior. Values assigned below are the defaults:
+There are a few environment variables that can be set to alter `Zsh-Select` behavior. Values assigned below are the
+defaults:
 
 ```zsh
 export ZSHSELECT_BOLD="1"                   # The interface will be drawn in bold font. Use "0" for no bold
@@ -72,18 +67,17 @@ export ZSHSELECT_START_IN_SEARCH_MODE="1"   # Starts Zsh-Select with searching a
 ```
 
 ## Use with plugin managers
+
 ### [Zinit](https://github.com/zdharma-continuum/zinit)
 
-Add `zinit load zdharma-continuum/zsh-select` to `.zshrc`.
-The plugin will be loaded next time you start `Zsh`.
-To update issue `zinit update zdharma-continuum/zsh-select` from command line.
+Add `zinit load zdharma-continuum/zsh-select` to `.zshrc`. The plugin will be loaded next time you start `Zsh`. To
+update issue `zinit update zdharma-continuum/zsh-select` from command line.
 
 ### Zgen
 
-Add `zgen load zdharma-continuum/zsh-select` to `.zshrc` and issue a `zgen reset` (this
-assumes that there is a proper `zgen save` construct in `.zshrc`).
+Add `zgen load zdharma-continuum/zsh-select` to `.zshrc` and issue a `zgen reset` (this assumes that there is a proper
+`zgen save` construct in `.zshrc`).
 
 ### Antigen
-Add `antigen bundle zdharma-continuum/zsh-select` to `.zshrc`. There also should be
-`antigen apply`.
 
+Add `antigen bundle zdharma-continuum/zsh-select` to `.zshrc`. There also should be `antigen apply`.
